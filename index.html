@@ -95,14 +95,12 @@ title: Home
   <ul class="tab-nav">
     <li><div class="button active" data-ref="#papers-preprint">Preprint</div></li>
     <li><div class="button" data-ref="#papers-2025">2025</div></li>
-    <!-- <li><div class="button" data-ref="#papers-2024">2024</div></li>
-    <li><div class="button" data-ref="#papers-2023">2023-Past</div></li> -->
     <li><div class="button" data-ref="#papers-all">All</div></li>
   </ul>
 
   <div class="tab-content">
     <!-- Tab: Preprint -->
-    <div class="tab-pane" id="papers-preprint">
+    <div class="tab-pane active" id="papers-preprint">
       {% assign paperspreprint = site.data.publications.papers | where: "year", "preprint" %}
       {% for paper in paperspreprint %}
         <div class="paper">
@@ -122,7 +120,7 @@ title: Home
     </div>
 
     <!-- Tab: 2025 -->
-    <div class="tab-pane active" id="papers-2025">
+    <div class="tab-pane" id="papers-2025">
       {% assign papers2025 = site.data.publications.papers | where: "year", "2025" %}
       {% for paper in papers2025 %}
         <div class="paper">
