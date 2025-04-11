@@ -1,20 +1,20 @@
 papers:
-  - title: "FORMAL: Democratizing Lean 4 Formalization Through Retrieval-Augmented Thinking and Agentic Feedback Loops"
-    year: preprint
-    authors: '<p style="color:#4a6fa5;">Mustafa Sameen</p>'
-    selected: n
+  # - title: "FORMAL: Democratizing Lean 4 Formalization Through Retrieval-Augmented Thinking and Agentic Feedback Loops"
+  #   year: preprint
+  #   authors: '<p style="color:#4a6fa5;">Mustafa Sameen</p>'
+  #   selected: n
     
-  - title: "Type-Theoretic Foundations for Enhancing RAG Efficiency and Correctness"
-    year: preprint
-    authors: '<p style="color:#4a6fa5;">Mustafa Sameen</p>'
-    venue: "TYPES 2025"
-    selected: n
+  # - title: "Type-Theoretic Foundations for Enhancing RAG Efficiency and Correctness"
+  #   year: preprint
+  #   authors: '<p style="color:#4a6fa5;">Mustafa Sameen</p>'
+  #   venue: "TYPES 2025"
+  #   selected: n
     
-  - title: "Constraint-Based Fairness in Machine Learning: A Declarative Approach to Bias Mitigation"
-    year: preprint
-    authors: '<p style="color:#4a6fa5;">Mustafa Sameen</p>'
-    venue: "CP 2025"
-    selected: n
+  # - title: "Constraint-Based Fairness in Machine Learning: A Declarative Approach to Bias Mitigation"
+  #   year: preprint
+  #   authors: '<p style="color:#4a6fa5;">Mustafa Sameen</p>'
+  #   venue: "CP 2025"
+  #   selected: n
 #
 #  - title: "Pangea: A Fully Open Multilingual Multimodal LLM for 39 Languages"
 #    authors: "Xiang Yue, Yueqi Song, Akari Asai, <b><u>Seungone Kim</u></b>, Jean de Dieu Nyandwi, Simran Khanuja, Anjali Kantharuban, Lintang Sutawika, Sathyanarayanan Ramamoorthy, Graham Neubig"
