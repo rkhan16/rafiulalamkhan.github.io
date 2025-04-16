@@ -2,22 +2,26 @@
 layout: default
 title: Home
 ---
-<!-- ========== About ========== -->
- <div class="about-section" id="about">
+<!-- ========== BIO ========== -->
+<div class="about-section" id="about">
   <br>
   <h4>Bio</h4>
   <p>
-    I am a senior undergraduate student at <b>Colorado College</b>, double majoring in <b>Computer Science</b> and <b>Mathematics</b>, where I work with Professor Robert Rennie on autoformalization. I've developed <b>FORMAL</b>, a system combining Retrieval-Augmented Thinking with agentic feedback loops that achieves 92% syntactic correctness in translating mathematics to Lean 4. I've also served as a Research Fellow with the <b>State of the Rockies Project</b> and interned at <b>SocialTechLab Inc.</b>, where I engineered features for a mental wellness app.
+    I am an incoming PhD student at the <a href="https://www.ufl.edu">University of Florida</a>, working with <a href="https://www.essie.ufl.edu/people/name/xilei-zhao/">Dr. Xilei Zhao</a> in the <a href="https://faculty.eng.ufl.edu/sermos-lab/">SERMoS Lab</a> at the intersection of <b>Artificial Intelligence</b> and <b>Transportation Engineering</b>. My current research focuses on developing interpretable machine learning models with fairness constraints for transportation systems, including a unified framework for addressing fairness across the entire travel modeling pipeline (trip generation, destination distribution, mode choice, and traffic assignment). I am also exploring bi-directional fairness frameworks to prevent biases from propagating between modeling stages.
   </p>
   <p>
-    My research interests include <b>Formal Verification</b>, <b>Low-Resource NLP</b>, and <b>Mathematical Reasoning</b>. Specifically, I focus on:
+    I recently graduated from <a href="https://www.coloradocollege.edu">Colorado College</a> with a double major in <b>Computer Science</b> and <b>Mathematics</b>, where I developed <b>FORMAL</b>—an AI system that integrates Retrieval-Augmented Thinking and agentic feedback loops for translating informal mathematics into Lean 4 code with 92% syntactic correctness.
   </p>
-  <ul>
-    <li>Developing resource-efficient approaches to translate between informal mathematics and formal proof systems</li>
-    <li>Exploring cross-lingual mathematical reasoning for underrepresented languages</li>
-    <li>Creating type-theoretic frameworks to enhance retrieval-augmented generation systems</li>
-  </ul>
- </div>
+  <p>
+ My research interests include <b>LLM Agents</b>, <b>Trustworthy AI</b>, and <b>AI for Transportation</b>. I'm particularly excited about:
+</p>
+<ul>
+<li>Designing interpretable and fair AI models for transportation demand forecasting that balance predictive accuracy with equity considerations</li>
+<li>Developing integrated approaches to ensure fairness across multi-stage travel modeling pipelines</li>
+<li>Creating real-time digital twins powered by LLM-based agents for adaptive transportation systems monitoring and management</li>
+<li>Building robust validation frameworks for agent-based transportation models with resource-efficient architectures</li>
+</ul>
+</div>
 
 <!-- ========== NEWS ========== -->
 <div class="docs-section" id="news">
@@ -87,118 +91,105 @@ title: Home
 <!-- ========== PUBLICATIONS ========== -->
 <div class="docs-section" id="publications">
   <h4>Publications</h4>
-
-  <!-- <p>Most recent publications on <a href="{{ site.data.main_info.google_scholar }}" target="_blank">Google Scholar</a>.<br/>
-  <sup><b>*</b></sup> indicates equal contribution.
-  </p> -->
-
   <ul class="tab-nav">
     <li><div class="button active" data-ref="#papers-preprint">Preprint</div></li>
     <li><div class="button" data-ref="#papers-2025">2025</div></li>
     <li><div class="button" data-ref="#papers-all">All</div></li>
   </ul>
-
+  
   <div class="tab-content">
     <!-- Tab: Preprint -->
     <div class="tab-pane active" id="papers-preprint">
       {% assign paperspreprint = site.data.publications.papers | where: "year", "preprint" %}
       {% for paper in paperspreprint %}
-        <div class="paper">
-          <p class="title"><b>{{ paper.title }}</b></p>
-          <p>{{ paper.authors }}</p>
-          <p><i>{{ paper.venue }}</i></p>
-          <div class="paper-buttons">
-            {% if paper.paper_pdf %}
-              <a class="button" href="{{ paper.paper_pdf }}" target="_blank">Paper</a>
-            {% endif %}
-            {% if paper.code %}
-              <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
+      <div class="paper">
+        <div class="paper-container">
+          <div class="paper-image">
+            {% if paper.image %}
+            <img src="{{ paper.image }}" alt="Paper thumbnail">
+            {% else %}
+            <div class="placeholder-image"></div>
             {% endif %}
           </div>
+          <div class="paper-content">
+            <p class="title"><b>{{ paper.title }}</b></p>
+            <p>{{ paper.authors }}</p>
+            <p><i>{{ paper.venue }}</i></p>
+            <div class="paper-buttons">
+              {% if paper.paper_pdf %}
+              <a class="button" href="{{ paper.paper_pdf }}" target="_blank">Paper</a>
+              {% endif %}
+              {% if paper.code %}
+              <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
+              {% endif %}
+            </div>
+          </div>
         </div>
+      </div>
       {% endfor %}
     </div>
-
+    
     <!-- Tab: 2025 -->
     <div class="tab-pane" id="papers-2025">
       {% assign papers2025 = site.data.publications.papers | where: "year", "2025" %}
       {% for paper in papers2025 %}
-        <div class="paper">
-          <p class="title"><b>{{ paper.title }}</b></p>
-          <p>{{ paper.authors }}</p>
-          <p><i>{{ paper.venue }}</i></p>
-          <div class="paper-buttons">
-            {% if paper.paper_pdf %}
-              <a class="button" href="{{ paper.paper_pdf }}" target="_blank">Paper</a>
-            {% endif %}
-            {% if paper.code %}
-              <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
+      <div class="paper">
+        <div class="paper-container">
+          <div class="paper-image">
+            {% if paper.image %}
+            <img src="{{ paper.image }}" alt="Paper thumbnail">
+            {% else %}
+            <div class="placeholder-image"></div>
             {% endif %}
           </div>
+          <div class="paper-content">
+            <p class="title"><b>{{ paper.title }}</b></p>
+            <p>{{ paper.authors }}</p>
+            <p><i>{{ paper.venue }}</i></p>
+            <div class="paper-buttons">
+              {% if paper.paper_pdf %}
+              <a class="button" href="{{ paper.paper_pdf }}" target="_blank">Paper</a>
+              {% endif %}
+              {% if paper.code %}
+              <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
+              {% endif %}
+            </div>
+          </div>
         </div>
+      </div>
       {% endfor %}
     </div>
-
-    <!-- Tab: 2024 -->
-    <!-- <div class="tab-pane" id="papers-2024">
-      {% assign papers2024 = site.data.publications.papers | where: "year", "2024" %}
-      {% for paper in papers2024 %}
-        <div class="paper">
-          <p class="title"><b>{{ paper.title }}</b></p>
-          <p>{{ paper.authors }}</p>
-          <p><i>{{ paper.venue }}</i></p>
-          <div class="paper-buttons">
-            {% if paper.paper_pdf %}
-              <a class="button" href="{{ paper.paper_pdf }}" target="_blank">Paper</a>
-            {% endif %}
-            {% if paper.code %}
-              <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
-            {% endif %}
-          </div>
-        </div>
-      {% endfor %}
-    </div> -->
-
-    <!-- Tab: 2023-Past -->
-    <!-- <div class="tab-pane" id="papers-2023">
-      {% assign papers2023 = site.data.publications.papers | where: "year", "2023" %}
-      {% for paper in papers2023 %}
-        <div class="paper">
-          <p class="title"><b>{{ paper.title }}</b></p>
-          <p>{{ paper.authors }}</p>
-          <p><i>{{ paper.venue }}</i></p>
-          <div class="paper-buttons">
-            {% if paper.paper_pdf %}
-              <a class="button" href="{{ paper.paper_pdf }}" target="_blank">Paper</a>
-            {% endif %}
-            {% if paper.code %}
-              <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
-            {% endif %}
-          </div>
-        </div>
-      {% endfor %}
-    </div> -->
-
+    
     <!-- Tab: All Papers -->
     <div class="tab-pane" id="papers-all">
       {% assign papersall = site.data.publications.papers %}
       {% for paper in papersall %}
-        <div class="paper">
-          <p class="title"><b>{{ paper.title }}</b></p>
-          <p>{{ paper.authors }}</p>
-          <p><i>{{ paper.venue }}</i></p>
-          <div class="paper-buttons">
-            {% if paper.paper_pdf %}
-              <a class="button" href="{{ paper.paper_pdf }}" target="_blank">Paper</a>
-            {% endif %}
-            {% if paper.code %}
-              <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
+      <div class="paper">
+        <div class="paper-container">
+          <div class="paper-image">
+            {% if paper.image %}
+            <img src="{{ paper.image }}" alt="Paper thumbnail">
+            {% else %}
+            <div class="placeholder-image"></div>
             {% endif %}
           </div>
+          <div class="paper-content">
+            <p class="title"><b>{{ paper.title }}</b></p>
+            <p>{{ paper.authors }}</p>
+            <p><i>{{ paper.venue }}</i></p>
+            <div class="paper-buttons">
+              {% if paper.paper_pdf %}
+              <a class="button" href="{{ paper.paper_pdf }}" target="_blank">Paper</a>
+              {% endif %}
+              {% if paper.code %}
+              <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
+              {% endif %}
+            </div>
+          </div>
         </div>
+      </div>
       {% endfor %}
     </div>
-
   </div>
 </div>
 
