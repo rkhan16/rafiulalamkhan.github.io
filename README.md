@@ -1,4 +1,4 @@
-# Mustafa Sameen's Website (based on and Junmo Kang's template and Seungone Kim's Website)
+# Rafiul Alam Khan's Website (based on and Mustafa Sameen's Website)
 
 ## Updates guide
 Change one of the files in `_data`, unless you are changing the look of the website.
